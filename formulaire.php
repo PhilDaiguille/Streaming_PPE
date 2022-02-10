@@ -25,11 +25,11 @@
     <main>
         <nav>
             <ul>
-                <li><img src="https://fr.web.img6.acsta.net/c_310_420/pictures/210/485/21048559_20131010181109755.jpg" alt="truc"></li>
-                <li><img src="https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/36/02/52/18846059.jpg" alt="truc"></li>
-                <li><img src="https://fr.web.img4.acsta.net/r_310_420/medias/nmedia/18/35/57/73/18660716.jpg" alt="truc"></li>
-                <li><img src="https://fr.web.img3.acsta.net/c_310_420/pictures/19/09/24/09/25/3228359.jpg" alt="truc"></li>
-                <li><img src="https://fr.web.img3.acsta.net/r_310_420/img/43/7f/437f3c43ec217ff7995160f921a6d007.jpg" alt="truc"></li>
+                <li><img src="./assets/Scarface.jpg" alt="Scarface"></li>
+                <li><img src="./assets/PulpFiction.jpg" alt="PulpFiction"></li>
+                <li><img src="./assets/LeParrain.jpg" alt="LeParrain"></li>
+                <li><img src="./assets/TheShining.jpg" alt="TheShining"></li>
+                <li><img src="./assets/Jaws.jpg" alt="Jaws"></li>
             </ul>
         </nav>
         <?php
