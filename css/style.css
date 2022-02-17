@@ -34,6 +34,15 @@ img{
 	object-fit: cover;
 	vertical-align: middle;
 }
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
 /* HEADER */
 header{
     display: flex;
