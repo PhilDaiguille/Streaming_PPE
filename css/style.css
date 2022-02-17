@@ -89,8 +89,19 @@ ul img{
 	margin: 0rem auto;
 	border-radius: .5rem;
 	border: solid .2rem var(--default);
-	box-shadow: .1rem .1rem .8rem #000;
+	box-shadow: .1rem .1rem .8rem var(--default);
 }
+.light header ul{
+	position: fixed;
+	z-index: 1;
+	top: 2%;
+	left: 96%;
+	background-color: var(--white);
+	border: solid .2rem var(--default);
+	border-radius: 2rem;
+	padding: 1rem;
+}
+
 .light h2{
 	color: var(--default);
 }
@@ -106,6 +117,7 @@ ul img{
 .light input, .light select{
 	color: #222;
 	background-color: #fafafa;
+	
 }
 .light legend{
 	display: block;
@@ -149,6 +161,12 @@ main .success{
 	padding: 2rem;
 	text-align: center;
 }
+main .error{
+	background-color: rgb(170, 17, 30);
+	border: solid .2rem var(--default);
+	padding: 2rem;
+	text-align: center;
+}
 section ul, main nav ul{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -158,12 +176,9 @@ section ul, main nav ul{
 section ul li img,main nav ul li img{
 	display: block;
 	margin: 0rem auto;
-	border-radius: .5rem;
+	border-radius: 0.3rem;
 	border: solid .2rem var(--white);
 	transition: all .3s ease-in-out;
-}
-section ul li img:hover, main nav ul li img:hover{
-	transform: scale(1.1);
 }
 section a{
 	display: block;
@@ -217,7 +232,11 @@ form input[type="submit"]{
 	cursor: pointer;
 	font-weight: bolder;
 }
-
+form input:focus, form select:focus{
+	box-shadow: 0 0 .7rem var(--tertiare);
+	border: solid .2rem var(--tertiare);
+	outline: none;
+}
 form input{
 	display: block;
 	border-radius: .5rem;
@@ -265,6 +284,16 @@ footer p{
 		transform: none;
 		max-width: 10rem;
 	}
+    header ul{
+        position: absolute;
+        z-index: 1;
+        top: 1.5%;
+        left: 84%;
+        background-color: var(--white);
+        border: solid .2rem var(--tertiare);
+        border-radius: 2rem;
+        padding: 1rem;
+    }
 	header nav{
 		position: absolute;
 		top: 2%;
