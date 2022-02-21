@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 	/*APP*/
+
 	console.log("charged");
 	let date = new Date();
 	let footer = document.querySelector("footer p");
 	let body = document.querySelector("body");
-	let img = document.querySelector("nav ul li img");
-	let label = document.querySelector("form label *");
+	let el = document.querySelector("main p");
 
 	footer.innerText += ` ${date.getFullYear()}`;
 	/*ACCESSIBILITY*/
@@ -27,29 +27,30 @@ document.addEventListener("DOMContentLoaded", () => {
 			btn2.innerHTML = `<span class="material-icons">light_mode</span>`;
 		}
 		body.classList.toggle("light");
-		img.classList.toggle("light_img");
-		label.classList.toggle("light_label");
 	});
 	/*FORM*/
 	let btn, nom, prenom, email, ville, pays;
 
+	btn = document.getElementsByTagName("input")[3];
 	nom = document.getElementsByTagName("input")[0].value;
 	prenom = document.getElementsByTagName("input")[1].value;
 	email = document.getElementsByTagName("input")[2].value;
 	ville = document.getElementsByTagName("select")[0].value;
 	pays = document.getElementsByTagName("select")[1].value;
-	btn = document.getElementsByTagName("input")[3];
 
 	btn.addEventListener("click", e => {
 		e.preventDefault();
 		Formulaire();
 	});
+
 	let Formulaire = () => {
 		console.log(nom, prenom, email, ville, pays);
-		if (nom && prenom && email && ville && pays) {
-			console.log("formulaire validé");
+		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
+			el.innerText = "Veuillez remplir tous les champs";
+			el.classList.add("error");
 		} else {
-			console.log("formulaire non validé");
+			el.innerText = "Votre formulaire a bien été envoyé";
+			el.classList.add("success");
 		}
 	};
 });

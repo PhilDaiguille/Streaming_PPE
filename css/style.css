@@ -8,6 +8,7 @@ body{
 	font: 1.6rem 'Encode Sans', sans-serif;
 	margin:0;
 	background-color: var(--default);
+	font-weight: 500;
 }
 section,figure,h1,h2,h3,h4,h5,h6,ol,p,ul{
 	margin:0;
@@ -48,19 +49,21 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+	background-color: #111;
+	border-bottom: solid .3rem #000;
+	padding: 2rem;
 	
 }
 header h1{
     padding: 2rem;
     text-align: center;
     text-transform: capitalize;
-	border: solid .4rem var(--default);
 	border-radius: 1rem;
 	background-color: var(--secondary);
 }
 header ul{
-	position: fixed;
-	z-index: 1;
+	position: absolute;
+	z-index: 0;
 	top: 2%;
 	left: 96%;
 	background-color: var(--white);
@@ -73,6 +76,8 @@ header ul li{
 	margin: 0.5rem auto;
 	cursor: pointer;
 }
+
+
 header img{
 	display: block;
 	transform: translateX(-3rem);
@@ -82,9 +87,22 @@ header img{
 :root{
 	--default: #222;
 	--white: #fff;
-	--primary: #2c3e50;
+	--primary: #111;
 	--secondary: #c0392b;
 	--tertiare: #a72b1d;
+}
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 255, 255) #333;
+}
+*::-webkit-scrollbar {
+    width: .4rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .2rem solid rgb(255, 255, 255);
 }
 /*ACCESSIBILITY*/
 .accessibility{
@@ -93,7 +111,7 @@ header img{
 .light{
 	background-color: #fafafa;
 }
-.light section ul li img{
+.light main section ul li img{
 	display: block;
 	margin: 0rem auto;
 	border-radius: .5rem;
@@ -130,7 +148,7 @@ header img{
 }
 .light img{
 	border-radius: .5rem;
-	border: solid .2rem var(--default)
+
 }
 .light legend{
 	display: block;
@@ -147,16 +165,16 @@ main{
 	margin: 0 auto;
 	max-width: 90rem;
 }
-section{
+main section{
 	max-width: 90rem;
 	margin: 0 auto;
 }
-section h2{
+main section h2{
 	text-align: center;
 	padding: 2rem;
 	color: var(--white);
 }
-section p{
+main section p{
 	text-align: center;
 	padding: 2rem;
 	border: solid .2rem var(--secondary);
@@ -172,32 +190,36 @@ main .success{
 	background-color: rgb(26, 124, 26);
 	border: solid .2rem var(--default);
 	padding: 2rem;
+	color: #fff;
+	border-radius: .5rem;
 	text-align: center;
 }
 main .error{
 	background-color: rgb(170, 17, 30);
 	border: solid .2rem var(--default);
 	padding: 2rem;
+	color: #fff;
+	border-radius: .5rem;
 	text-align: center;
 }
-section ul, main nav ul{
+main section ul, main nav ul{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 1rem;
 	border-radius: .5rem;
 }
-section ul li img,main nav ul li img{
+main section ul li img,main nav ul li img{
 	display: block;
 	margin: 0rem auto;
 	border-radius: 0.3rem;
 	border: solid .2rem var(--white);
 	transition: all .3s ease-in-out;
 }
-section a{
+main section a{
 	display: block;
 	margin: 3rem auto;
 	padding: 2rem;
-	border-radius: .4rem;
+	border-radius: .5rem;
 	text-align: center;
 	background-color: var(--tertiare);
 	max-width: 40rem;
@@ -277,15 +299,59 @@ form select option{
     text-transform: capitalize;
 }
 /* FOOTER */
+
+
 footer{
-	background-color: var(--default);
-	padding: 2rem;
+	border-top: solid .3rem #000;
+    background-color: #111;
+    color: #fff;
 }
 footer p{
 	text-align: center;
-	color: var(--white);
-	
+	padding: 1rem;
+	letter-spacing: 0.082em;
+	font-weight: 900;
 }
+.caté{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    padding: 3rem;
+}
+.caté img{
+	max-width: 20rem;
+	display: flex;
+	height: auto;
+	padding-top: 3rem;
+	display: inline-block;
+	vertical-align: center;
+    margin: 0 auto;
+}
+.caté section{
+	display: inline-block;
+	vertical-align: center;
+	padding: 3rem;
+}
+.caté h2{
+	padding-top: 2rem;
+    font-weight: 800;
+}
+.caté section ul{
+    width: 100%;
+    margin: 3rem auto;
+	align-items: center;
+}
+.caté section ul li{
+    padding-bottom: 1rem;
+}
+.caté section ul li:hover{
+	text-decoration: underline;
+}
+.caté section ul li a{
+    color: rgba(255, 255, 255, 0.699);
+    padding-bottom: 1rem;
+    font-style: italic;
+}
+
 @media screen and (max-width: 60rem){
 	header{
 		display: block;
@@ -314,12 +380,25 @@ footer p{
 		top: 2%;
 		left: 82%;
 	}
-	body{
+	main, header{
 		padding: 1rem;
 	}
-	section ul{
+	main section ul{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+	}
+	footer .caté{
+        padding: 1rem;
+		grid-template-columns: repeat(1, 1fr);
+    }
+	footer img{
+		max-width: 10rem;
+	}
+	footer .caté section{
+		padding: 0rem;
+	}
+	footer .caté{
+		text-align: center;
 	}
 
 }
