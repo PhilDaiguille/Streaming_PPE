@@ -123,10 +123,15 @@ header img{
 	border-radius: 2rem;
 	padding: 1rem;
 }
-.light header, .light footer{
+.light header{
 	background-color: #fefefe;
 	color: #000;
-	border: none;
+	border-bottom: solid 0.3rem var(--default);
+}
+.light footer{
+	background-color: #fefefe;
+	color: #000;
+	border-top: solid 0.3rem var(--default);
 }
 .light header img{
 	filter: invert(1);
@@ -145,6 +150,8 @@ header img{
 }
 .light h2{
 	color: var(--default);
+	text-align: center;
+	padding: 2rem;
 }
 
 .light label{
