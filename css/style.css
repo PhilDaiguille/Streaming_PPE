@@ -62,10 +62,8 @@ header h1{
 	background-color: var(--secondary);
 }
 header ul{
-	position: absolute;
-	z-index: 0;
-	top: 2%;
-	left: 96%;
+	display: inline-block;
+	margin: 0 2rem; 
 	background-color: var(--white);
 	border: solid .2rem var(--tertiare);
 	border-radius: 2rem;
@@ -73,7 +71,7 @@ header ul{
 }
 
 header ul li{
-	margin: 0.5rem auto;
+	margin: 0.5rem;
 	cursor: pointer;
 }
 
@@ -119,16 +117,32 @@ header img{
 	box-shadow: .1rem .1rem .8rem var(--default);
 }
 .light header ul{
-	position: fixed;
-	z-index: 1;
-	top: 2%;
-	left: 96%;
+	margin: 0 2rem; 
 	background-color: var(--white);
-	border: solid .2rem var(--default);
+	border: solid .2rem var(--tertiare);
 	border-radius: 2rem;
 	padding: 1rem;
 }
-
+.light header, .light footer{
+	background-color: #fefefe;
+	color: #000;
+	border: none;
+}
+.light header img{
+	filter: invert(1);
+}
+.light header{
+	box-shadow: 0rem 0rem 1rem var(--default);
+}
+.light footer{
+	box-shadow: 0 0 1rem var(--default);
+}
+.light footer section ul li a{
+	color: #000;
+}
+.light header ul li{
+	margin: 0.5rem;
+}
 .light h2{
 	color: var(--default);
 }
@@ -321,6 +335,7 @@ footer p{
 	max-width: 20rem;
 	display: flex;
 	height: auto;
+	width: auto;
 	padding-top: 3rem;
 	display: inline-block;
 	vertical-align: center;
@@ -366,15 +381,18 @@ footer p{
 		max-width: 10rem;
 	}
     header ul{
-        position: absolute;
+        display: flex;
+		max-width: 10rem;
         z-index: 1;
-        top: 1.5%;
-        left: 84%;
+		margin: 0.5rem auto;
         background-color: var(--white);
         border: solid .2rem var(--tertiare);
         border-radius: 2rem;
         padding: 1rem;
     }
+	header ul li{
+		margin: 0 auto;
+	}
 	header nav{
 		position: absolute;
 		top: 2%;
@@ -382,6 +400,19 @@ footer p{
 	}
 	main, header{
 		padding: 1rem;
+	}
+	.light header ul{
+		display: flex;
+		max-width: 10rem;
+		z-index: 1;
+		margin: 0.5rem auto;
+		background-color: var(--white);
+		border: solid .2rem var(--tertiare);
+		border-radius: 2rem;
+		padding: 1rem;
+	}
+	.light header ul li{
+		margin: 0 auto;
 	}
 	main section ul{
 		display: grid;
