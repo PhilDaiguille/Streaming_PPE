@@ -31,15 +31,80 @@
             </ul>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li><img src="./assets/Scarface.jpg" alt="Scarface"></li>
-                <li><img src="./assets/PulpFiction.jpg" alt="PulpFiction"></li>
-                <li><img src="./assets/LeParrain.jpg" alt="LeParrain"></li>
-                <li><img src="./assets/TheShining.jpg" alt="TheShining"></li>
-                <li><img src="./assets/Jaws.jpg" alt="Jaws"></li>
+        <section>
+            <ul class="grid-picture-large" aria-hidden="true">
+                <li data-image="./assets/Scarface.jpg" data-title="Scarface"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Scarface.jpg" alt="Scarface" />
+                        <figcaption>
+                            <h2>
+                                <span class="material-icons" aria-hidden="true">
+                                    pages
+                                </span>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/PulpFiction.jpg" data-title="Pulp Fiction"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/PulpFiction.jpg" alt="PulpFiction" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/LeParrain.jpg" data-title="Le Parrain"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/LeParrain.jpg" alt="LeParrain" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/Jaws.jpg" data-title="Jaws"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Jaws.jpg" alt="Jaws" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/BladeRunner.jpg" data-title="Blade Runner"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/BladeRunner.jpg" alt="BladeRunner" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
             </ul>
-        </nav>
+        </section>
         <p id="warning"></p>
         <form method="get">
             <fieldset>
@@ -76,6 +141,20 @@
             </fieldset>
         </form>
        
+        <!-- modale -->
+        <div class="parent-modale" role="dialog" aria-label="true">
+            <figure class="modale">
+                <button aria-label="closed">
+                    <span class="material-icons">clear</span>
+                </button>
+                <img src="https://via.placeholder.com/500" alt="picture" />
+                <figcaption class="desc">
+                    <h3>title</h3>
+                    <p> </p>
+                    <time>Years : </time>
+                </figcaption>
+            </figure>
+        </div>
 
     </main>
     <footer>

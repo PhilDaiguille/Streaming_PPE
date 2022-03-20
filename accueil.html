@@ -1,70 +1,278 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <meta name="description" content="Streaming">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streaming</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="description" content="Streaming" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
+
 <body>
     <header>
-        <a href="#"><img src="./assets/filmstrip_film_movie_camera_reel_icon_209544.png" alt="streaming"></a>
+        <a href="#"><img src="./assets/filmstrip_film_movie_camera_reel_icon_209544.png" alt="streaming" /></a>
         <h1>Films, séries TV et bien plus en illimité.</h1>
-            <ul>
-                <li aria-hidden="true">
-                    <span class="material-icons" >
-                        visibility
-                    </span>
-                </li>
-                <li aria-hidden="true">
-                    <span class="material-icons">
-                        light_mode
-                    </span>
-                </li>
-            </ul>
+        <ul>
+            <li aria-hidden="true">
+                <span class="material-icons"> visibility </span>
+            </li>
+            <li aria-hidden="true">
+                <span class="material-icons"> light_mode </span>
+            </li>
+        </ul>
     </header>
     <main>
         <section>
-            <h2>Prêt à regarder ? Remplissez le formulaire proposé dans cette page</h2>
-            <p>Tous les mois profitez de toutes les nouveautés série et cinéma. A partir du mois
-                prochain on vous propose tous les classiques du cinéma. Où que vous soyez. Tous
-                le s films en VO, VOST, VF et plus d'options. </p>
-            <ul>
-                <li><img src="./assets/Scarface.jpg" alt="Scarface"></li>
-                <li><img src="./assets/PulpFiction.jpg" alt="PulpFiction"></li>
-                <li><img src="./assets/LeParrain.jpg" alt="LeParrain"></li>
-                <li><img src="./assets/Jaws.jpg" alt="Jaws"></li>
-                <li><img src="./assets/BladeRunner.jpg" alt="BladeRunner"></li>
-                <li><img src="./assets/BlueBrothers.jpg" alt="BlueBrothers"></li>
-                <li><img src="./assets/Terminator.jpg" alt="Terminator"></li>
-                <li><img src="./assets/TheShining.jpg" alt="TheShining"></li>
-                <li><img src="./assets/ForrestGump.jpg" alt="ForrestGump"></li>
-                <li><img src="./assets/LesEvades.jpg" alt="LesEvades"></li>
-                <li><img src="./assets/FightClub.jpg" alt="FightClub"></li>
-                <li><img src="./assets/LesAffranchis.jpg" alt="LesAffranchis"></li>
-                <li><img src="./assets/LeSilencedesAgneaux.jpg" alt="LeSilencedesAgneaux"></li>
-                <li><img src="./assets/SoldatRyan.jpg" alt="SoldatRyan"></li>
-                <li><img src="./assets/Matrix.jpg" alt="Matrix"></li>
+            <h2>Prêt à regarder ? Remplissez le formulaire proposé dans cette
+                page</h2>
+            <p>Tous les mois profitez de toutes les nouveautés série et cinéma. A
+                partir du mois prochain on vous propose tous les classiques du cinéma.
+                Où que vous soyez. Tous le s films en VO, VOST, VF et plus d'options.
+            </p>
+            <ul class="grid-picture-large" aria-hidden="true">
+                <li data-image="./assets/Scarface.jpg" data-title="Scarface"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Scarface.jpg" alt="Scarface" />
+                        <figcaption>
+                            <h2>
+                                <span class="material-icons" aria-hidden="true">
+                                    pages
+                                </span>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/PulpFiction.jpg" data-title="Pulp Fiction"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/PulpFiction.jpg" alt="PulpFiction" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/LeParrain.jpg" data-title="Le Parrain"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/LeParrain.jpg" alt="LeParrain" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/Jaws.jpg" data-title="Jaws"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Jaws.jpg" alt="Jaws" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/BladeRunner.jpg" data-title="Blade Runner"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/BladeRunner.jpg" alt="BladeRunner" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/BlueBrothers.jpg" data-title="Blue Brothers"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/BlueBrothers.jpg" alt="BlueBrothers" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/Terminator.jpg" data-title="Terminator"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Terminator.jpg" alt="Terminator" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/TheShining.jpg" data-title="The Shining"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/TheShining.jpg" alt="TheShining" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/ForrestGump.jpg" data-title="Forrest Gump"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/ForrestGump.jpg" alt="ForrestGump" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/LesEvades.jpg" data-title="Les Evades"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/LesEvades.jpg" alt="LesEvades" />
+                        <figcaption>
+                            <h2>
+                                <span class="material-icons" aria-hidden="true">
+                                    pages
+                                </span>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/FightClub.jpg" data-title="Fight Club"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/FightClub.jpg" alt="FightClub" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/LesAffranchis.jpg" data-title="Les Affranchis"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/LesAffranchis.jpg" alt="LesAffranchis" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/LeSilencedesAgneaux.jpg" data-title="Le Silence des Agneaux"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/LeSilencedesAgneaux.jpg" alt="LeSilencedesAgneaux" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/SoldatRyan.jpg" data-title="Soldat Ryan"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/SoldatRyan.jpg" alt="SoldatRyan" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li data-image="./assets/Matrix.jpg" data-title="Matrix"
+                    data-description="c'est un film épatant, entre action et émotion..." data-dates="02/01/1983">
+                    <figure>
+                        <img src="./assets/Matrix.jpg" alt="Matrix" />
+                        <figcaption>
+                            <h2>
+                                <i class="material-icons" aria-hidden="true">
+                                    pages
+                                </i>
+                                Agrandir
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </li>
             </ul>
             <a href="./formulaire.html">Cliquez ici pour commencer</a>
         </section>
+        <!-- modale -->
+        <div class="parent-modale" role="dialog" aria-label="true">
+            <figure class="modale">
+                <button aria-label="closed">
+                    <span class="material-icons">clear</span>
+                </button>
+                <img src="https://via.placeholder.com/500" alt="picture" />
+                <figcaption class="desc">
+                    <h3>title</h3>
+                    <p> </p>
+                    <time>Years : </time>
+                </figcaption>
+            </figure>
+        </div>
     </main>
     <footer>
         <div class="caté">
-            <img src="./assets/popcorn.png" alt="Popcorn">
+            <img src="./assets/popcorn.png" alt="Popcorn" />
             <section>
                 <h2>Année</h2>
                 <ul>
                     <li><a href="#">Année 2000</a></li>
-                    <li><a href="#">Année 1990</a></li>    
+                    <li><a href="#">Année 1990</a></li>
                     <li><a href="#">Année 1980</a></li>
                     <li><a href="#">Année 1970</a></li>
                 </ul>
@@ -88,10 +296,9 @@
                 </ul>
             </section>
         </div>
-        <p>
-            &copy; Streaming | Tous droits réservés - Philippe DELENTE | 
-        </p>
+        <p> &copy; Streaming | Tous droits réservés - Philippe DELENTE | </p>
     </footer>
     <script src="./js/app.js"></script>
 </body>
+
 </html>

@@ -102,6 +102,8 @@ header img{
     background-color: #222;
     outline: .2rem solid rgb(255, 255, 255);
 }
+/* LOADED */
+
 /*ACCESSIBILITY*/
 .accessibility{
 	filter: contrast(1.5) grayscale(90%);
@@ -153,6 +155,9 @@ header img{
 	text-align: center;
 	padding: 2rem;
 }
+.light section ul figure figcaption h2{
+    color: #fff;
+}
 
 .light label{
 	display: block;
@@ -188,7 +193,7 @@ main{
 }
 main section{
 	max-width: 90rem;
-	margin: 0 auto;
+	margin: 2rem auto;
 }
 main section h2{
 	text-align: center;
@@ -319,6 +324,120 @@ form select option{
 [placeholder]{
     text-transform: capitalize;
 }
+
+/*MODALE*/
+main .grid-picture-large{
+    display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	border-radius: .5rem;
+}
+ul figure{
+    position: relative;
+	height: 32vh;
+}
+ul figure .material-icons{
+    vertical-align: -.4rem;
+}
+/* Overley effect */
+section ul figure figcaption{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+	border: solid .2rem #000;
+    align-items: center;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    transform-origin: center center;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+section ul figure:hover figcaption{
+    transform: scale(1);
+}
+.parent-modale{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.parent-modale .modale{
+    max-width: 90rem;
+    padding: 1rem;
+	margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+	border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+.parent-modale .modale .desc{
+    position: static;
+    transition: none;
+	transform: none;
+	width: 100%;
+    background-color: #fff;
+    color: #222;
+    
+}
+.modale-active{
+    z-index: 1;
+    opacity: 1;
+    transform-origin: center center;
+}
+.parent-modale .modale .desc h3{
+	font-size: 2rem;
+	border-radius: 0 0 .5rem .5rem;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+}
+.parent-modale .modale img{
+	width: 100%;
+	height: 80vh;
+	border-radius: .5rem .5rem 0 0;
+}
+.parent-modale .modale .desc p, .parent-modale .modale .desc time{
+    padding: 1rem;
+	border-radius: .5rem;
+}
+.parent-modale .modale button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    z-index: 2;
+	border: solid .2rem #000;
+	background-color: #fff;
+    color: #111;
+	border-radius: .5rem;
+    cursor: pointer;
+}
+.parent-modale .modale button .material-icons{
+	vertical-align: -.4rem;
+}
+
+
+
+
 /* FOOTER */
 
 
@@ -421,9 +540,9 @@ footer p{
 	.light header ul li{
 		margin: 0 auto;
 	}
-	main section ul{
+	main section .grid-picture-large{
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 2fr);
 	}
 	footer .caté{
         padding: 1rem;
