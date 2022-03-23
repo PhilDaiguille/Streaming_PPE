@@ -51,9 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		console.log(nom, prenom, email, ville, pays);
 		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
 			el.innerText = "Veuillez remplir tous les champs";
+			el.classList.remove("success");
 			el.classList.add("error");
 		} else {
 			el.innerText = "Votre formulaire a bien été envoyé";
+			el.classList.remove("remove");
+			el.classList.add("success");
+			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
+			sessionStorage.setItem("user", "sessionid");
 		}
 	};
 	let el2, modal, closed, open_modal, closed_all;
