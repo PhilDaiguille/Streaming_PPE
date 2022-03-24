@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	ville = document.getElementsByTagName("select")[0].value;
 	pays = document.getElementsByTagName("select")[1].value;
 
-	let Formulaire = (e) => {
+	let Formulaire = () => {
 		if(nom && prenom && email && ville && pays) {
 			el.innerText = "Votre formulaire a bien été envoyé";
 			el.classList.remove("error");
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	};
 
-	submit.addEventListener("click", (e) => {
+	submit.addEventListener("click", e => {
 		e.preventDefault();
 		Formulaire();
 	});
