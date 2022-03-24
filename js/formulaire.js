@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		Formulaire();
 	});
 	let Formulaire = () => {
+		btn = document.getElementsByTagName("input")[3];
+		nom = document.getElementsByTagName("input")[0].value;
+		prenom = document.getElementsByTagName("input")[1].value;
+		email = document.getElementsByTagName("input")[2].value;
+		ville = document.getElementsByTagName("select")[0].value;
+		pays = document.getElementsByTagName("select")[1].value;
 		console.log(nom, prenom, email, ville, pays);
 		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
 			el.innerText = "Veuillez remplir tous les champs";
@@ -51,11 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			el.classList.add("success");
 		}
 	};
-
-	submit.addEventListener("click", e => {
-		e.preventDefault();
-		Formulaire();
-	});
 
 	let el2, modal, closed, open_modal, closed_all, rows;
 	
