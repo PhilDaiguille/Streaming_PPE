@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		pays = document.getElementsByTagName("select")[1].value;
 		console.log(nom, prenom, email, ville, pays);
 		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
-			el.innerText = "Veuillez remplir tous les champs";
+			el.innerText = "Veuillez remplir tous les champs ";
 			el.classList.remove("success");
 			el.classList.add("error");
 		} else {
