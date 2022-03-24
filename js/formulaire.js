@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			el.innerText = "Votre formulaire a bien été envoyé";
 			el.classList.remove("error");
 			el.classList.add("success");
+			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
+			sessionStorage.setItem("user", "sessionid");
 		}
 	};
 
