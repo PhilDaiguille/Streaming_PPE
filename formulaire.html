@@ -106,9 +106,9 @@
             </ul>
         </section>
         <p id="warning"></p>
-        <form method="get">
-            <fieldset>
-                <legend>Remplissez le formulaire</legend>
+        <fieldset>
+            <legend>Remplissez le formulaire</legend>
+            <form method="get">
                 <label for="nom">nom</label>
                 <input type="text" id="nom" name="nom" placeholder="nom" aria-required="true" autofocus>
                 <label for="prenom">prénom</label>
@@ -137,9 +137,10 @@
                     <option value="Allemagne">Allemagne</option>
                     <option value="Portugal">Portugal</option>
                 </select>
-                <input type="submit" aria-label="Valider" value="Valider" href="#warning">
-            </fieldset>
-        </form>
+                <input type="submit" value="Valider">
+            </form>
+        </fieldset>
+        
        
         <!-- modale -->
         <div class="parent-modale" role="dialog" aria-label="true">
@@ -151,7 +152,7 @@
                 <figcaption class="desc">
                     <h3>title</h3>
                     <p> </p>
-                    <time>Years : </time>
+                    <time datetime="2022-03-20">Years : </time>
                 </figcaption>
             </figure>
         </div>

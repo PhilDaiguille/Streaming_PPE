@@ -35,7 +35,7 @@ img{
 	object-fit: cover;
 	vertical-align: middle;
 }
-select {
+select, input{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -43,9 +43,6 @@ select {
 
 select::-ms-expand {
     display: none;
-}
-input:last-child::-ms-expand{
-	padding: 2rem;
 }
 /* HEADER */
 header{
@@ -260,7 +257,7 @@ form *{
     padding: .9rem;
 	text-transform: capitalize;
 }
-form fieldset{
+fieldset{
 	border: none;
 	margin: 2rem auto;
 	padding: 2rem 0;
@@ -273,7 +270,7 @@ form label{
 	font-weight: bold;
 	font-size: 2rem;
 }
-form fieldset legend{
+fieldset legend{
 	display: block;
 	margin: 0 auto;
 	color: var(--white);

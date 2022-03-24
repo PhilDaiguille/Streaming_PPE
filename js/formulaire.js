@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	let btn1 = document.querySelector("header ul li:nth-child(1)");
 	let btn2 = document.querySelector("header ul li:nth-child(2)");
 
-	window.addEventListener("load", e => {
-		console.log("load");
-		body.classList.add("loaded");
-	});
-
 	btn1.addEventListener("click", () => {
 		if (btn1.innerHTML === `<span class="material-icons">visibility</span>`) {
 			btn1.innerHTML = `<span class="material-icons">visibility_off</span>`;
@@ -33,36 +28,37 @@ document.addEventListener("DOMContentLoaded", () => {
 		body.classList.toggle("light");
 	});
 	/*FORM*/
-	let btn, nom, prenom, email, ville, pays;
+	let submit, nom, prenom, email, ville, pays;
 
-	btn = document.getElementsByTagName("input")[3];
+	submit = document.getElementsByTagName("input")[3];
 	nom = document.getElementsByTagName("input")[0].value;
 	prenom = document.getElementsByTagName("input")[1].value;
 	email = document.getElementsByTagName("input")[2].value;
 	ville = document.getElementsByTagName("select")[0].value;
 	pays = document.getElementsByTagName("select")[1].value;
 
-	btn.addEventListener("click", e => {
+	let Formulaire = (e) => {
+		if(nom && prenom && email && ville && pays) {
+			el.innerText = "Votre formulaire a bien été envoyé";
+			el.classList.remove("error");
+			el.classList.add("success");
+			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
+			sessionStorage.setItem("user", "sessionid");
+		} 
+		else if (!nom || !prenom || !email || !ville || !pays) {
+			el.innerText = "Veuillez remplir tous les champs";
+			el.classList.remove("success");
+			el.classList.add("error");
+		}
+	};
+
+	submit.addEventListener("click", (e) => {
 		e.preventDefault();
 		Formulaire();
 	});
 
-	let Formulaire = () => {
-		console.log(nom, prenom, email, ville, pays);
-		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
-			el.innerText = "Veuillez remplir tous les champs";
-			el.classList.remove("success");
-			el.classList.add("error");
-		} else {
-			el.innerText = "Votre formulaire a bien été envoyé";
-			el.classList.remove("remove");
-			el.classList.add("success");
-			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
-			sessionStorage.setItem("user", "sessionid");
-		}
-	};
-	let el2, modal, closed, open_modal, closed_all;
-
+	let el2, modal, closed, open_modal, closed_all, rows;
+	
 	el2 = document.querySelectorAll(".grid-picture-large li");
 	modal = document.querySelector(".parent-modale");
 	closed = document.querySelector(".modale button");
