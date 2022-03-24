@@ -28,27 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
 		body.classList.toggle("light");
 	});
 	/*FORM*/
-	let submit, nom, prenom, email, ville, pays;
-
-	submit = document.getElementsByTagName("input")[3];
+	let btn, nom, prenom, email, ville, pays;
+	btn = document.getElementsByTagName("input")[3];
 	nom = document.getElementsByTagName("input")[0].value;
 	prenom = document.getElementsByTagName("input")[1].value;
 	email = document.getElementsByTagName("input")[2].value;
 	ville = document.getElementsByTagName("select")[0].value;
 	pays = document.getElementsByTagName("select")[1].value;
-
+	btn.addEventListener("click", e => {
+		e.preventDefault();
+		Formulaire();
+	});
 	let Formulaire = () => {
-		if(nom && prenom && email && ville && pays) {
-			el.innerText = "Votre formulaire a bien été envoyé";
-			el.classList.remove("error");
-			el.classList.add("success");
-			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
-			sessionStorage.setItem("user", "sessionid");
-		} 
-		else if (!nom || !prenom || !email || !ville || !pays) {
+		console.log(nom, prenom, email, ville, pays);
+		if (nom === "" || prenom === "" || email === "" || ville === "" || pays === "") {
 			el.innerText = "Veuillez remplir tous les champs";
 			el.classList.remove("success");
 			el.classList.add("error");
+		} else {
+			el.innerText = "Votre formulaire a bien été envoyé";
+			el.classList.remove("error");
+			el.classList.add("success");
 		}
 	};
 
