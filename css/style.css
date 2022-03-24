@@ -361,7 +361,7 @@ section ul figure:hover figcaption{
     transform: scale(1);
 }
 .parent-modale{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
