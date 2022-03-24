@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			el.classList.add("success");
 			localStorage.setItem("user", nom + " | " + prenom + " | " + email + " | " + ville + " | " + pays);
 			sessionStorage.setItem("user", "sessionid");
+
 		}
 	};
 
